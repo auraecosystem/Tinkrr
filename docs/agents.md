@@ -221,4 +221,40 @@ And I would not enable a public /api/admin/x402-mesh/keypair endpoint without au
 Given the current 50/100 score, a properly implemented pass should be capable of moving Tinkrr substantially higher—particularly because Discoverability (91), Capabilities (74), and the existing OAuth/API/OpenAPI/AP2 infrastructure are already in decent shape.
 
 If you’re working on the Tinkrr repository in Codex, the right next move is to have the coding agent implement all of these as one cohesive Agent Readiness v1 change rather than pasting the individual scanner prompts independently.
+Implemented the x402-mesh integration in your auraecosystem/startuphub repository and opened PR #2:
 
+https://github.com/auraecosystem/startuphub/pull/2
+
+The PR adds the x402-mesh core, including:
+
+* GET /api/admin/x402-mesh/keypair with admin-token protection.
+* GET/POST /api/x402-mesh/registry.
+* Ed25519 key generation and signed referral tokens.
+* Peer-pricelist generation for 402 responses.
+* 15-minute referral-token expiry.
+* Persistent registry support through Upstash Redis.
+* StartupHub’s /.well-known/x402-mesh.json.
+* Deployment/environment configuration documentation.
+* Unit tests.
+* No private key or wallet committed to Git.
+
+The StartupHub public key already present in the x402-mesh ecosystem was preserved.
+
+There is one important limitation I deliberately did not hide: the repository does not contain the actual implementation of the deployed /api/v1/email/validate handler. The repository currently contains only the API directory scaffolding and documentation around that service.
+
+So I did not create a competing /api/v1/email/validate implementation that could accidentally shadow or break your production service. Instead, the PR provides buildMesh402() and setMeshHeaders() so the existing payment boundary can emit the peer pricelist and signed referrals.
+
+Before merging, configure:
+`
+X402_MESH_ADMIN_TOKEN
+X402_MESH_PRIVATE_KEY
+X402_MESH_PUBLIC_KEY
+X402_MESH_WALLET
+UPSTASH_REDIS_REST_URL
+UPSTASH_REDIS_REST_TOKEN
+`
+Most importantly, X402_MESH_WALLET must be your real Base 0x... payout address. I did not invent one.
+
+The repository’s current x402-mesh tree was essentially an empty manifest/config scaffold, so this PR turns that scaffold into an actual server-side integration rather than merely filling in .well-known/x402-mesh.json.
+
+I would not merge PR #2 yet if your goal is a genuinely end-to-end paid email-validation flow. The next technical step is to connect the payment/referral middleware to the actual deployed email-validation handler and verify the resulting HTTP 402 response against the x402-mesh registry.
