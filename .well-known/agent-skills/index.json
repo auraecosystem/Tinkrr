@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "service": "Tinkrr API",
+  "skills": [
+    {
+      "id": "api-discovery",
+      "name": "API discovery",
+      "description": "Discover public Tinkrr API operations and schemas.",
+      "entrypoint": "https://tinkrr-api.tinkrr.workers.dev/openapi.json",
+      "protocol": "OpenAPI"
+    },
+    {
+      "id": "mcp-tools",
+      "name": "MCP tools",
+      "description": "Use Tinkrr's MCP server and its published tool schemas.",
+      "entrypoint": "https://tinkrr-api.tinkrr.workers.dev/.well-known/mcp/server-card.json",
+      "protocol": "MCP"
+    },
+    {
+      "id": "machine-payments",
+      "name": "x402 machine payments",
+      "description": "Discover and satisfy x402 payment challenges for payment-enabled resources.",
+      "entrypoint": "https://tinkrr-api.tinkrr.workers.dev/.well-known/x402-mesh.json",
+      "protocol": "x402"
+    }
+  ]
+}

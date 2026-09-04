@@ -1,0 +1,4 @@
+Contact: https://tinkrr.app/
+Policy: https://tinkrr.app/
+Preferred-Languages: en
+Canonical: https://tinkrr-api.tinkrr.workers.dev/.well-known/security.txt

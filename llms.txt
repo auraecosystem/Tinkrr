@@ -1,0 +1,15 @@
+# Tinkrr API
+
+Tinkrr provides agent-ready API services with MCP, OpenAPI, x402 payments, and machine-readable discovery.
+
+## Core resources
+- [OpenAPI specification](https://tinkrr-api.tinkrr.workers.dev/openapi.json)
+- [API catalog](https://tinkrr-api.tinkrr.workers.dev/.well-known/api-catalog)
+- [MCP server card](https://tinkrr-api.tinkrr.workers.dev/.well-known/mcp/server-card.json)
+- [Agent Skills](https://tinkrr-api.tinkrr.workers.dev/.well-known/agent-skills/index.json)
+- [x402-mesh registry](https://tinkrr-api.tinkrr.workers.dev/.well-known/x402-mesh.json)
+- [Pricing](https://tinkrr-api.tinkrr.workers.dev/pricing)
+- [Checkout](https://tinkrr-api.tinkrr.workers.dev/checkout)
+
+## Agent behavior
+Prefer `application/json` for structured API responses and `text/markdown` when requesting human-readable documentation. Payment-enabled endpoints use x402 when a payment challenge is returned.

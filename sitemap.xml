@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/openapi.json</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/llms.txt</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/pricing</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/checkout</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/.well-known/api-catalog</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/.well-known/mcp/server-card.json</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/.well-known/agent-skills/index.json</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://tinkrr-api.tinkrr.workers.dev/.well-known/x402-mesh.json</loc><lastmod>2026-09-04</lastmod></url>
+</urlset>

@@ -1,0 +1,25 @@
+# Tinkrr API
+
+Tinkrr is an agent-ready API surface exposing machine-readable discovery, OpenAPI, MCP, and x402 payment capabilities.
+
+## Discovery
+
+- https://tinkrr-api.tinkrr.workers.dev/robots.txt
+- https://tinkrr-api.tinkrr.workers.dev/sitemap.xml
+- https://tinkrr-api.tinkrr.workers.dev/openapi.json
+- https://tinkrr-api.tinkrr.workers.dev/.well-known/api-catalog
+- https://tinkrr-api.tinkrr.workers.dev/.well-known/mcp/server-card.json
+- https://tinkrr-api.tinkrr.workers.dev/.well-known/agent-skills/index.json
+- https://tinkrr-api.tinkrr.workers.dev/.well-known/x402-mesh.json
+
+## Representation negotiation
+
+The homepage should return HTML by default, Markdown for `Accept: text/markdown`, and structured JSON for `Accept: application/json`.
+
+## Payments
+
+x402 is the canonical machine-payment rail currently advertised by this repository. MPP, AP2, and ACP are not falsely advertised until their runtime integrations exist.
+
+## Implementation note
+
+The runtime must expose the discovery resources above and attach RFC 8288 `Link`, `Vary: Accept`, and RFC 9331 `RateLimit` headers to applicable responses. Pricing and Offer JSON-LD must be generated from the same runtime pricing source used by x402 rather than hard-coded independently.

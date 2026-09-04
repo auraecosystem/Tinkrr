@@ -1,0 +1,15 @@
+{
+  "name": "Tinkrr API",
+  "description": "Agent-ready API services with OpenAPI, MCP and x402 machine payments.",
+  "base_url": "https://tinkrr-api.tinkrr.workers.dev",
+  "specifications": {
+    "openapi": "https://tinkrr-api.tinkrr.workers.dev/openapi.json",
+    "mcp_server_card": "https://tinkrr-api.tinkrr.workers.dev/.well-known/mcp/server-card.json",
+    "agent_skills": "https://tinkrr-api.tinkrr.workers.dev/.well-known/agent-skills/index.json",
+    "x402_mesh": "https://tinkrr-api.tinkrr.workers.dev/.well-known/x402-mesh.json"
+  },
+  "payment": {
+    "protocol": "x402",
+    "discovery": "https://tinkrr-api.tinkrr.workers.dev/.well-known/x402-mesh.json"
+  }
+}
