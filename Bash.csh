@@ -4,3 +4,4 @@ mppx fetch "https://www.startuphub.ai/api/mpp/company?slug=anthropic"
 
 # or see the raw challenge:
 curl -i "https://www.startuphub.ai/api/mpp/company?slug=anthropic"
+ npx @nillion/create-nillion-app
