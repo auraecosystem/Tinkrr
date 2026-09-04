@@ -1,6 +1,6 @@
 [tinkrr](https://tinkrr.app/llms-full.txt)
 This report is actually useful: Tinkrr is already halfway to being a strong agent-native service. The biggest problem is that the missing pieces are concentrated in machine-readable content, payments, and quality metadata.
-
+[robot.txt](https://tinkrr.app/robots.txt)
 I would not fix these one-by-one manually. I’d make a single “Agent Readiness” implementation pass.
 
 The priority order I recommend is:
