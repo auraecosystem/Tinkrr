@@ -1,1 +1,198 @@
 # Tinkrr
+# StartupHub.ai - Complete AI Startup Intelligence Platform Guide
+
+## About StartupHub.ai
+
+StartupHub.ai is the leading AI startup intelligence platform, providing comprehensive data on artificial intelligence companies, investors, funding rounds, and industry news. Founded to democratize access to startup intelligence, we help entrepreneurs, investors, researchers, and journalists stay informed about the rapidly evolving AI landscape.
+
+## Core Features
+
+### 1. AI News Coverage
+We publish daily news covering:
+- AI startup funding announcements
+- Product launches and updates
+- Industry analysis and trends
+- Executive moves and company changes
+- Research breakthroughs
+- Policy and regulation updates
+
+### 2. Startup Database
+Our database includes 50,000+ AI companies with:
+- Company name, description, and founding date
+- Headquarters location and employee count
+- Funding history (rounds, amounts, investors)
+- Technology focus areas
+- Key executives and founders
+- Social links and website
+
+### 3. Investor Database
+Track venture capital and angel investors:
+- Investment thesis and focus areas
+- Portfolio companies
+- Investment stage preferences
+- Contact information
+- Recent deals
+
+### 4. People Database
+Profiles of AI industry leaders:
+- Current and past roles
+- Education and background
+- Companies founded or led
+- Social profiles
+
+## Free Tools
+
+Human index: https://www.startuphub.ai/free-tools
+
+### Email Validator (/email-validator)
+Professional email verification tool:
+- Single email validation with real-time SMTP checks
+- Bulk validation for up to 100 emails
+- Email discovery by name + company domain
+- LinkedIn profile email finder
+- Free REST API with no authentication required
+
+How it works:
+1. Enter an email address
+2. We check syntax, domain MX records, and SMTP response
+3. Get instant results: valid, invalid, or risky
+
+### URL Scraper (/url-scraper)
+Extract structured data from any website:
+- Company information extraction
+- Contact details discovery
+- Social media links
+- Technology stack detection
+
+### Article to YouTube (/video-maker)
+Turn an article URL into a narrated explainer video:
+- AI script and voiceover
+- 16:9 and 9:16 renders
+- Download the MP4 or publish to YouTube
+- Free daily watermarked render; paid plans drop the watermark
+
+### Company Comparison (/comparison)
+Compare AI companies side-by-side:
+- Funding comparison
+- Employee growth
+- Technology overlap
+- Market positioning
+
+## API Documentation
+
+### Email Validation API
+
+**Endpoint:** POST /api/email-validator/validate
+**Request:**
+```json
+{
+  "email": "user@example.com"
+}
+```
+**Response:**
+```json
+{
+  "email": "user@example.com",
+  "valid": true,
+  "deliverable": true,
+  "domain": "example.com",
+  "mx_records": true
+}
+```
+
+### Email Discovery API
+
+**Endpoint:** POST /api/email-validator/discover
+**Request:**
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "domain": "company.com"
+}
+```
+
+### Bulk Validation API
+
+**Endpoint:** POST /api/email-validator/bulk
+**Request:**
+```json
+{
+  "emails": ["email1@example.com", "email2@example.com"]
+}
+```
+
+## Content Categories
+
+### News Categories
+- AI Startups
+- Funding & Investment
+- Product Launches
+- Research & Development
+- Policy & Regulation
+- Industry Analysis
+- Executive Moves
+
+### Startup Categories
+- Machine Learning
+- Natural Language Processing
+- Computer Vision
+- Robotics & Automation
+- Healthcare AI
+- Fintech AI
+- Enterprise AI
+- Consumer AI
+- AI Infrastructure
+- Generative AI
+
+## Data Sources
+
+We aggregate data from:
+- Public company filings
+- Press releases
+- Funding announcements
+- LinkedIn profiles
+- Company websites
+- News publications
+- Government databases
+
+## Frequently Asked Questions
+
+### What is StartupHub.ai?
+StartupHub.ai is an AI startup intelligence platform that provides comprehensive data on AI companies, investors, funding rounds, and industry news.
+
+### Is StartupHub.ai free?
+Browsing the database, reading news, Article to YouTube, and Agent Readiness are free. Listing your own startup is $5/month or $40/year per profile (cancel anytime). Premium plans add advanced research features (tracked profiles, verified emails, exports, API access).
+
+### How often is data updated?
+Our news is updated continuously. Company data is refreshed weekly, with funding announcements added within 24 hours.
+
+### Can I submit my startup?
+Yes, visit /submit to add your AI company to our database. Listing fee is $5/month or $40/year — cancel anytime.
+
+### How does the email validator work?
+Our email validator performs real-time checks including syntax validation, domain verification, MX record lookup, and SMTP mailbox verification.
+
+### Is the API free?
+Yes, we offer free API access with rate limits: 100 validations/hour, 10 bulk requests/hour, 5 discovery requests/hour.
+
+## Technical Specifications
+
+- Built with Next.js 15+ and React
+- Hosted on Render with Cloudflare CDN
+- Database powered by Supabase
+- Real-time updates via WebSocket
+- Mobile-responsive design
+- Accessibility compliant (WCAG 2.1)
+
+## Contact Information
+
+- Website: https://www.startuphub.ai
+- Twitter: https://twitter.com/startuphubai
+- Email: contact@startuphub.ai
+
+## Legal
+
+- Privacy Policy: https://www.startuphub.ai/privacy
+- Terms of Service: https://www.startuphub.ai/terms
+- Editorial Policy: https://www.startuphub.ai/editorial
