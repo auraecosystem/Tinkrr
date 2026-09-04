@@ -1,0 +1,12 @@
+# Tinkrr
+
+Tinkrr provides [brief description].
+
+## Documentation
+- [API documentation](/docs/api.md)
+- [OpenAPI](/openapi.json)
+- [API Catalog](/.well-known/api-catalog)
+- [MCP Server Card](/.well-known/mcp/server-card.json)
+- [Agent Skills](/.well-known/agent-skills/index.json)
+- [Pricing](/pricing)
+- [Checkout](/checkout)
